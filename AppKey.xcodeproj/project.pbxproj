@@ -1,0 +1,193 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A00000000000000000000001 /* AppKeyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00000000000000000000001 /* AppKeyApp.swift */; };
+		A00000000000000000000002 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00000000000000000000002 /* Models.swift */; };
+		A00000000000000000000003 /* BindingStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00000000000000000000003 /* BindingStore.swift */; };
+		A00000000000000000000004 /* BindingValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00000000000000000000004 /* BindingValidator.swift */; };
+		A00000000000000000000005 /* ApplicationSwitcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00000000000000000000005 /* ApplicationSwitcher.swift */; };
+		A00000000000000000000006 /* HotKeyRegistry.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00000000000000000000006 /* HotKeyRegistry.swift */; };
+		A00000000000000000000007 /* LoginItemController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00000000000000000000007 /* LoginItemController.swift */; };
+		A00000000000000000000008 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00000000000000000000008 /* AppState.swift */; };
+		A00000000000000000000009 /* InstalledApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00000000000000000000009 /* InstalledApplication.swift */; };
+		A0000000000000000000000A /* ShortcutRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0000000000000000000000A /* ShortcutRecorder.swift */; };
+		A0000000000000000000000B /* ApplicationPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0000000000000000000000B /* ApplicationPickerView.swift */; };
+		A0000000000000000000000C /* BindingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0000000000000000000000C /* BindingsView.swift */; };
+		A0000000000000000000000D /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B00000000000000000000020 /* Carbon.framework */; };
+		A0000000000000000000000E /* ServiceManagement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B00000000000000000000021 /* ServiceManagement.framework */; };
+		A0000000000000000000000F /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B00000000000000000000022 /* AppKit.framework */; };
+		A00000000000000000000010 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B00000000000000000000023 /* SwiftUI.framework */; };
+
+		A00000000000000000000021 /* Models.swift in Migrate Sources */ = {isa = PBXBuildFile; fileRef = B00000000000000000000002 /* Models.swift */; };
+		A00000000000000000000022 /* BindingStore.swift in Migrate Sources */ = {isa = PBXBuildFile; fileRef = B00000000000000000000003 /* BindingStore.swift */; };
+		A00000000000000000000023 /* BindingValidator.swift in Migrate Sources */ = {isa = PBXBuildFile; fileRef = B00000000000000000000004 /* BindingValidator.swift */; };
+		A00000000000000000000024 /* ManicoImporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0000000000000000000000D /* ManicoImporter.swift */; };
+		A00000000000000000000025 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0000000000000000000000E /* main.swift */; };
+		A00000000000000000000026 /* AppKit.framework in Migrate Frameworks */ = {isa = PBXBuildFile; fileRef = B00000000000000000000022 /* AppKit.framework */; };
+		A00000000000000000000027 /* libsqlite3.tbd in Migrate Frameworks */ = {isa = PBXBuildFile; fileRef = B00000000000000000000025 /* libsqlite3.tbd */; };
+
+		A00000000000000000000031 /* ModelsAndStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0000000000000000000000F /* ModelsAndStoreTests.swift */; };
+		A00000000000000000000032 /* ApplicationSwitcherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00000000000000000000010 /* ApplicationSwitcherTests.swift */; };
+		A00000000000000000000033 /* HotKeyRegistryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00000000000000000000011 /* HotKeyRegistryTests.swift */; };
+		A00000000000000000000034 /* ManicoImporterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00000000000000000000012 /* ManicoImporterTests.swift */; };
+		A00000000000000000000035 /* ManicoImporter.swift in Test Sources */ = {isa = PBXBuildFile; fileRef = B0000000000000000000000D /* ManicoImporter.swift */; };
+		A00000000000000000000036 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B00000000000000000000024 /* XCTest.framework */; };
+		A00000000000000000000037 /* libsqlite3.tbd in Test Frameworks */ = {isa = PBXBuildFile; fileRef = B00000000000000000000025 /* libsqlite3.tbd */; };
+		A00000000000000000000038 /* AppKey.app in Test Dependencies */ = {isa = PBXBuildFile; fileRef = B00000000000000000000030 /* AppKey.app */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C00000000000000000000001 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D00000000000000000000001 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E00000000000000000000001;
+			remoteInfo = AppKey;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		B00000000000000000000001 /* AppKeyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppKeyApp.swift; sourceTree = "<group>"; };
+		B00000000000000000000002 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		B00000000000000000000003 /* BindingStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindingStore.swift; sourceTree = "<group>"; };
+		B00000000000000000000004 /* BindingValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindingValidator.swift; sourceTree = "<group>"; };
+		B00000000000000000000005 /* ApplicationSwitcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationSwitcher.swift; sourceTree = "<group>"; };
+		B00000000000000000000006 /* HotKeyRegistry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotKeyRegistry.swift; sourceTree = "<group>"; };
+		B00000000000000000000007 /* LoginItemController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginItemController.swift; sourceTree = "<group>"; };
+		B00000000000000000000008 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		B00000000000000000000009 /* InstalledApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstalledApplication.swift; sourceTree = "<group>"; };
+		B0000000000000000000000A /* ShortcutRecorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortcutRecorder.swift; sourceTree = "<group>"; };
+		B0000000000000000000000B /* ApplicationPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationPickerView.swift; sourceTree = "<group>"; };
+		B0000000000000000000000C /* BindingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindingsView.swift; sourceTree = "<group>"; };
+		B0000000000000000000000D /* ManicoImporter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManicoImporter.swift; sourceTree = "<group>"; };
+		B0000000000000000000000E /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		B0000000000000000000000F /* ModelsAndStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelsAndStoreTests.swift; sourceTree = "<group>"; };
+		B00000000000000000000010 /* ApplicationSwitcherTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationSwitcherTests.swift; sourceTree = "<group>"; };
+		B00000000000000000000011 /* HotKeyRegistryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotKeyRegistryTests.swift; sourceTree = "<group>"; };
+		B00000000000000000000012 /* ManicoImporterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManicoImporterTests.swift; sourceTree = "<group>"; };
+		B00000000000000000000013 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B00000000000000000000020 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = System/Library/Frameworks/Carbon.framework; sourceTree = SDKROOT; };
+		B00000000000000000000021 /* ServiceManagement.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ServiceManagement.framework; path = System/Library/Frameworks/ServiceManagement.framework; sourceTree = SDKROOT; };
+		B00000000000000000000022 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		B00000000000000000000023 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		B00000000000000000000024 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = System/Library/Frameworks/XCTest.framework; sourceTree = SDKROOT; };
+		B00000000000000000000025 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.text-based-dylib-definition; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		B00000000000000000000030 /* AppKey.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppKey.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B00000000000000000000031 /* AppKeyMigrate */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = AppKeyMigrate; sourceTree = BUILT_PRODUCTS_DIR; };
+		B00000000000000000000032 /* AppKeyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AppKeyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F00000000000000000000001 /* App Frameworks */ = {isa = PBXFrameworksBuildPhase; buildActionMask = 2147483647; files = (A0000000000000000000000D, A0000000000000000000000E, A0000000000000000000000F, A00000000000000000000010,); runOnlyForDeploymentPostprocessing = 0; };
+		F00000000000000000000002 /* Migrate Frameworks */ = {isa = PBXFrameworksBuildPhase; buildActionMask = 2147483647; files = (A00000000000000000000026, A00000000000000000000027,); runOnlyForDeploymentPostprocessing = 0; };
+		F00000000000000000000003 /* Test Frameworks */ = {isa = PBXFrameworksBuildPhase; buildActionMask = 2147483647; files = (A00000000000000000000036, A00000000000000000000037, A00000000000000000000038,); runOnlyForDeploymentPostprocessing = 0; };
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		G00000000000000000000001 = {
+			isa = PBXGroup;
+			children = (G00000000000000000000002, G00000000000000000000006, G00000000000000000000007, G00000000000000000000005, G00000000000000000000008,);
+			sourceTree = "<group>";
+		};
+		G00000000000000000000002 /* AppKey */ = {isa = PBXGroup; path = AppKey; sourceTree = "<group>"; children = (B00000000000000000000001, G00000000000000000000003, G00000000000000000000004, B00000000000000000000013,); };
+		G00000000000000000000003 /* Core */ = {isa = PBXGroup; path = Core; sourceTree = "<group>"; children = (B00000000000000000000008, B00000000000000000000005, B00000000000000000000003, B00000000000000000000004, B00000000000000000000006, B00000000000000000000009, B00000000000000000000007, B00000000000000000000002,); };
+		G00000000000000000000004 /* UI */ = {isa = PBXGroup; path = UI; sourceTree = "<group>"; children = (B0000000000000000000000B, B0000000000000000000000C, B0000000000000000000000A,); };
+		G00000000000000000000005 /* Frameworks */ = {isa = PBXGroup; children = (B00000000000000000000022, B00000000000000000000020, B00000000000000000000021, B00000000000000000000023, B00000000000000000000024, B00000000000000000000025,); name = Frameworks; sourceTree = "<group>"; };
+		G00000000000000000000006 /* AppKeyMigrate */ = {isa = PBXGroup; path = AppKeyMigrate; sourceTree = "<group>"; children = (B0000000000000000000000D, B0000000000000000000000E,); };
+		G00000000000000000000007 /* AppKeyTests */ = {isa = PBXGroup; path = AppKeyTests; sourceTree = "<group>"; children = (B00000000000000000000010, B00000000000000000000012, B0000000000000000000000F, B00000000000000000000011,); };
+		G00000000000000000000008 /* Products */ = {isa = PBXGroup; children = (B00000000000000000000030, B00000000000000000000031, B00000000000000000000032,); name = Products; sourceTree = "<group>"; };
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E00000000000000000000001 /* AppKey */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = H00000000000000000000002;
+			buildPhases = (I00000000000000000000001, F00000000000000000000001, J00000000000000000000001,);
+			buildRules = ();
+			dependencies = ();
+			name = AppKey;
+			productName = AppKey;
+			productReference = B00000000000000000000030;
+			productType = "com.apple.product-type.application";
+		};
+		E00000000000000000000002 /* AppKeyMigrate */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = H00000000000000000000003;
+			buildPhases = (I00000000000000000000002, F00000000000000000000002,);
+			buildRules = ();
+			dependencies = ();
+			name = AppKeyMigrate;
+			productName = AppKeyMigrate;
+			productReference = B00000000000000000000031;
+			productType = "com.apple.product-type.tool";
+		};
+		E00000000000000000000003 /* AppKeyTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = H00000000000000000000004;
+			buildPhases = (I00000000000000000000003, F00000000000000000000003,);
+			buildRules = ();
+			dependencies = (K00000000000000000000001,);
+			name = AppKeyTests;
+			productName = AppKeyTests;
+			productReference = B00000000000000000000032;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D00000000000000000000001 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {BuildIndependentTargetsInParallel = 1; LastSwiftUpdateCheck = 2660; LastUpgradeCheck = 2660; TargetAttributes = {E00000000000000000000001 = {CreatedOnToolsVersion = 26.6;}; E00000000000000000000002 = {CreatedOnToolsVersion = 26.6;}; E00000000000000000000003 = {CreatedOnToolsVersion = 26.6; TestTargetID = E00000000000000000000001;};};};
+			buildConfigurationList = H00000000000000000000001;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = zh_CN;
+			hasScannedForEncodings = 0;
+			knownRegions = (Base, zh_CN, en,);
+			mainGroup = G00000000000000000000001;
+			productRefGroup = G00000000000000000000008;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (E00000000000000000000001, E00000000000000000000002, E00000000000000000000003,);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		J00000000000000000000001 /* Resources */ = {isa = PBXResourcesBuildPhase; buildActionMask = 2147483647; files = (); runOnlyForDeploymentPostprocessing = 0; };
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		I00000000000000000000001 /* App Sources */ = {isa = PBXSourcesBuildPhase; buildActionMask = 2147483647; files = (A00000000000000000000001, A00000000000000000000002, A00000000000000000000003, A00000000000000000000004, A00000000000000000000005, A00000000000000000000006, A00000000000000000000007, A00000000000000000000008, A00000000000000000000009, A0000000000000000000000A, A0000000000000000000000B, A0000000000000000000000C,); runOnlyForDeploymentPostprocessing = 0; };
+		I00000000000000000000002 /* Migrate Sources */ = {isa = PBXSourcesBuildPhase; buildActionMask = 2147483647; files = (A00000000000000000000021, A00000000000000000000022, A00000000000000000000023, A00000000000000000000024, A00000000000000000000025,); runOnlyForDeploymentPostprocessing = 0; };
+		I00000000000000000000003 /* Test Sources */ = {isa = PBXSourcesBuildPhase; buildActionMask = 2147483647; files = (A00000000000000000000031, A00000000000000000000032, A00000000000000000000033, A00000000000000000000034, A00000000000000000000035,); runOnlyForDeploymentPostprocessing = 0; };
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		K00000000000000000000001 /* PBXTargetDependency */ = {isa = PBXTargetDependency; target = E00000000000000000000001 /* AppKey */; targetProxy = C00000000000000000000001 /* PBXContainerItemProxy */; };
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		L00000000000000000000001 /* Debug */ = {isa = XCBuildConfiguration; buildSettings = {CLANG_ENABLE_MODULES = YES; CLANG_ENABLE_OBJC_ARC = YES; COPY_PHASE_STRIP = NO; DEBUG_INFORMATION_FORMAT = dwarf; ENABLE_TESTABILITY = YES; GCC_OPTIMIZATION_LEVEL = 0; MACOSX_DEPLOYMENT_TARGET = 15.2; ONLY_ACTIVE_ARCH = YES; SDKROOT = macosx; SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG; SWIFT_OPTIMIZATION_LEVEL = "-Onone";}; name = Debug; };
+		L00000000000000000000002 /* Release */ = {isa = XCBuildConfiguration; buildSettings = {CLANG_ENABLE_MODULES = YES; CLANG_ENABLE_OBJC_ARC = YES; COPY_PHASE_STRIP = YES; DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym"; MACOSX_DEPLOYMENT_TARGET = 15.2; SDKROOT = macosx; SWIFT_COMPILATION_MODE = wholemodule; SWIFT_OPTIMIZATION_LEVEL = "-O";}; name = Release; };
+		L00000000000000000000003 /* App Debug */ = {isa = XCBuildConfiguration; buildSettings = {ARCHS = arm64; CODE_SIGN_STYLE = Automatic; CURRENT_PROJECT_VERSION = 1; DEVELOPMENT_TEAM = 57ZV996R49; ENABLE_APP_SANDBOX = NO; ENABLE_HARDENED_RUNTIME = NO; GENERATE_INFOPLIST_FILE = NO; INFOPLIST_FILE = AppKey/Info.plist; LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks"; MARKETING_VERSION = 1.0; MACOSX_DEPLOYMENT_TARGET = 15.2; PRODUCT_BUNDLE_IDENTIFIER = com.litt.AppKey; PRODUCT_NAME = "$(TARGET_NAME)"; SWIFT_EMIT_LOC_STRINGS = YES; SWIFT_STRICT_CONCURRENCY = complete; SWIFT_VERSION = 6.0;}; name = Debug; };
+		L00000000000000000000004 /* App Release */ = {isa = XCBuildConfiguration; buildSettings = {ARCHS = arm64; CODE_SIGN_STYLE = Automatic; CURRENT_PROJECT_VERSION = 1; DEVELOPMENT_TEAM = 57ZV996R49; ENABLE_APP_SANDBOX = NO; ENABLE_HARDENED_RUNTIME = NO; GENERATE_INFOPLIST_FILE = NO; INFOPLIST_FILE = AppKey/Info.plist; LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks"; MARKETING_VERSION = 1.0; MACOSX_DEPLOYMENT_TARGET = 15.2; PRODUCT_BUNDLE_IDENTIFIER = com.litt.AppKey; PRODUCT_NAME = "$(TARGET_NAME)"; SWIFT_EMIT_LOC_STRINGS = YES; SWIFT_STRICT_CONCURRENCY = complete; SWIFT_VERSION = 6.0;}; name = Release; };
+		L00000000000000000000005 /* Migrate Debug */ = {isa = XCBuildConfiguration; buildSettings = {ARCHS = arm64; CODE_SIGN_STYLE = Automatic; DEVELOPMENT_TEAM = 57ZV996R49; MACOSX_DEPLOYMENT_TARGET = 15.2; PRODUCT_NAME = "$(TARGET_NAME)"; SWIFT_STRICT_CONCURRENCY = complete; SWIFT_VERSION = 6.0;}; name = Debug; };
+		L00000000000000000000006 /* Migrate Release */ = {isa = XCBuildConfiguration; buildSettings = {ARCHS = arm64; CODE_SIGN_STYLE = Automatic; DEVELOPMENT_TEAM = 57ZV996R49; MACOSX_DEPLOYMENT_TARGET = 15.2; PRODUCT_NAME = "$(TARGET_NAME)"; SWIFT_STRICT_CONCURRENCY = complete; SWIFT_VERSION = 6.0;}; name = Release; };
+		L00000000000000000000007 /* Tests Debug */ = {isa = XCBuildConfiguration; buildSettings = {ARCHS = arm64; BUNDLE_LOADER = "$(TEST_HOST)"; CODE_SIGN_STYLE = Automatic; DEVELOPMENT_TEAM = 57ZV996R49; GENERATE_INFOPLIST_FILE = YES; LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks"; MACOSX_DEPLOYMENT_TARGET = 15.2; PRODUCT_BUNDLE_IDENTIFIER = com.litt.AppKeyTests; PRODUCT_NAME = "$(TARGET_NAME)"; SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) APPKEY_MIGRATION_TESTS"; SWIFT_STRICT_CONCURRENCY = complete; SWIFT_VERSION = 6.0; TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AppKey.app/Contents/MacOS/AppKey";}; name = Debug; };
+		L00000000000000000000008 /* Tests Release */ = {isa = XCBuildConfiguration; buildSettings = {ARCHS = arm64; BUNDLE_LOADER = "$(TEST_HOST)"; CODE_SIGN_STYLE = Automatic; DEVELOPMENT_TEAM = 57ZV996R49; GENERATE_INFOPLIST_FILE = YES; LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks"; MACOSX_DEPLOYMENT_TARGET = 15.2; PRODUCT_BUNDLE_IDENTIFIER = com.litt.AppKeyTests; PRODUCT_NAME = "$(TARGET_NAME)"; SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) APPKEY_MIGRATION_TESTS"; SWIFT_STRICT_CONCURRENCY = complete; SWIFT_VERSION = 6.0; TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AppKey.app/Contents/MacOS/AppKey";}; name = Release; };
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		H00000000000000000000001 /* Project config */ = {isa = XCConfigurationList; buildConfigurations = (L00000000000000000000001, L00000000000000000000002,); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
+		H00000000000000000000002 /* App config */ = {isa = XCConfigurationList; buildConfigurations = (L00000000000000000000003, L00000000000000000000004,); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
+		H00000000000000000000003 /* Migrate config */ = {isa = XCConfigurationList; buildConfigurations = (L00000000000000000000005, L00000000000000000000006,); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
+		H00000000000000000000004 /* Tests config */ = {isa = XCConfigurationList; buildConfigurations = (L00000000000000000000007, L00000000000000000000008,); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
+/* End XCConfigurationList section */
+	};
+	rootObject = D00000000000000000000001 /* Project object */;
+}
