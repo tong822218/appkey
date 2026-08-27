@@ -94,7 +94,14 @@ final class AppState: ObservableObject {
             let configuration = try store.load()
             try validator.validate(configuration.bindings)
             bindings = configuration.bindings
-            try hotKeyRegistry.replaceAll(with: activeBindings(from: bindings))
+            let registrationErrors = hotKeyRegistry.replaceAllAvailable(
+                with: activeBindings(from: bindings)
+            )
+            if !registrationErrors.isEmpty {
+                errorMessage = registrationErrors
+                    .map(\.localizedDescription)
+                    .joined(separator: "\n")
+            }
         } catch {
             errorMessage = "无法载入配置：\(error.localizedDescription)"
         }
@@ -121,8 +128,10 @@ final class AppState: ObservableObject {
         guard let binding = bindings.first(where: { $0.id == bindingID }),
               binding.isEnabled,
               binding.appExists else {
+            NSLog("AppKey ignored unavailable binding %@", bindingID.uuidString)
             return
         }
+        NSLog("AppKey triggered %@ at %@", binding.displayName, binding.appPath)
         switcher.perform(binding)
     }
 

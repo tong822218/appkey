@@ -20,4 +20,21 @@ final class HotKeyRegistryTests: XCTestCase {
 
         XCTAssertEqual(registered, ["old-a", "old-b"])
     }
+
+    func testRegisterAvailableKeepsSuccessfulRegistrationsAfterConflict() {
+        enum Failure: Error { case conflict }
+        var registered: [String] = ["stale"]
+
+        let errors = HotKeyRegistrationTransaction.registerAvailable(
+            desired: ["first", "conflict", "last"],
+            unregisterAll: { registered.removeAll() },
+            register: { item in
+                if item == "conflict" { throw Failure.conflict }
+                registered.append(item)
+            }
+        )
+
+        XCTAssertEqual(registered, ["first", "last"])
+        XCTAssertEqual(errors.count, 1)
+    }
 }

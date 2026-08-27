@@ -33,6 +33,23 @@ struct HotKeyRegistrationTransaction {
             throw error
         }
     }
+
+    static func registerAvailable<Item>(
+        desired: [Item],
+        unregisterAll: () -> Void,
+        register: (Item) throws -> Void
+    ) -> [Error] {
+        unregisterAll()
+        var errors: [Error] = []
+        for item in desired {
+            do {
+                try register(item)
+            } catch {
+                errors.append(error)
+            }
+        }
+        return errors
+    }
 }
 
 @MainActor
@@ -61,7 +78,7 @@ final class HotKeyRegistry {
             eventClass: OSType(kEventClassKeyboard),
             eventKind: UInt32(kEventHotKeyPressed)
         )
-        InstallEventHandler(
+        let status = InstallEventHandler(
             GetApplicationEventTarget(),
             Self.eventCallback,
             1,
@@ -69,6 +86,11 @@ final class HotKeyRegistry {
             nil,
             &eventHandler
         )
+        if status == noErr {
+            NSLog("AppKey hotkey event handler installed")
+        } else {
+            NSLog("AppKey failed to install hotkey event handler: %d", status)
+        }
     }
 
     deinit {
@@ -86,6 +108,31 @@ final class HotKeyRegistry {
             desired: desired,
             unregisterAll: unregisterAll,
             register: { try register(bindingID: $0.0, shortcut: $0.1) }
+        )
+    }
+
+    /// 启动时逐个恢复可用快捷键，避免单个系统冲突导致所有绑定失效。
+    func replaceAllAvailable(with bindings: [AppBinding]) -> [Error] {
+        let desired = bindings.compactMap { binding in
+            binding.shortcut.map { (binding.id, binding.displayName, $0) }
+        }
+        return HotKeyRegistrationTransaction.registerAvailable(
+            desired: desired,
+            unregisterAll: unregisterAll,
+            register: { item in
+                do {
+                    try register(bindingID: item.0, shortcut: item.2)
+                    NSLog("AppKey registered %@ for %@", item.2.displayText, item.1)
+                } catch {
+                    NSLog(
+                        "AppKey failed to register %@ for %@: %@",
+                        item.2.displayText,
+                        item.1,
+                        error.localizedDescription
+                    )
+                    throw error
+                }
+            }
         )
     }
 
@@ -135,7 +182,11 @@ final class HotKeyRegistry {
     }
 
     private func handle(numericID: UInt32) {
-        guard let bindingID = numericIDToBindingID[numericID] else { return }
+        guard let bindingID = numericIDToBindingID[numericID] else {
+            NSLog("AppKey received unknown hotkey id %u", numericID)
+            return
+        }
+        NSLog("AppKey received hotkey id %u for %@", numericID, bindingID.uuidString)
         onTrigger(bindingID)
     }
 
