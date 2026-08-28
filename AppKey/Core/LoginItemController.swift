@@ -26,7 +26,11 @@ final class LoginItemController {
 
     func setEnabled(_ enabled: Bool) throws {
         if enabled {
-            if SMAppService.mainApp.status == .notRegistered {
+            switch SMAppService.mainApp.status {
+            case .enabled, .requiresApproval:
+                return
+            default:
+                // .notRegistered 与首次注册前的 .notFound 都需要真正调用 register()
                 try SMAppService.mainApp.register()
             }
         } else if SMAppService.mainApp.status != .notRegistered {

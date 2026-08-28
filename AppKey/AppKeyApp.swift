@@ -53,6 +53,14 @@ private struct MenuBarContent: View {
             Button("批准登录启动…") { state.openLoginItemSettings() }
         }
 
+        if let errorMessage = state.errorMessage {
+            Button {
+                state.dismissError()
+            } label: {
+                Label(errorMessage, systemImage: "exclamationmark.triangle")
+            }
+        }
+
         Divider()
         Button("退出 AppKey") { NSApplication.shared.terminate(nil) }
             .keyboardShortcut("q")

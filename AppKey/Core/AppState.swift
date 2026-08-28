@@ -110,7 +110,7 @@ final class AppState: ObservableObject {
             do {
                 try loginItemController.setEnabled(true)
             } catch {
-                errorMessage = "AppKey 已启动，但需要你在系统设置中批准登录启动。"
+                errorMessage = "无法注册登录启动：\(error.localizedDescription)"
             }
             UserDefaults.standard.set(true, forKey: defaultsKey)
         }
