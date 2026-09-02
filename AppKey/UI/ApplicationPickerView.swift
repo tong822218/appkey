@@ -12,10 +12,7 @@ struct ApplicationPickerView: View {
 
     private var filteredApplications: [InstalledApplication] {
         guard !searchText.isEmpty else { return applications }
-        return applications.filter {
-            $0.displayName.localizedCaseInsensitiveContains(searchText)
-                || $0.path.localizedCaseInsensitiveContains(searchText)
-        }
+        return applications.filter { $0.matches(searchText: searchText) }
     }
 
     var body: some View {

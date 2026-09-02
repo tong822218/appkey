@@ -78,4 +78,36 @@ final class ModelsAndStoreTests: XCTestCase {
         XCTAssertThrowsError(try BindingValidator().validate([first, duplicatePath]))
         XCTAssertThrowsError(try BindingValidator().validate([first, duplicateShortcut]))
     }
+
+    func testApplicationScannerIncludesStandaloneAppsAndDeduplicatesPaths() throws {
+        let applicationsRoot = temporaryDirectory.appendingPathComponent("Applications", isDirectory: true)
+        let regularApp = applicationsRoot.appendingPathComponent("Regular.app", isDirectory: true)
+        let standaloneApp = temporaryDirectory.appendingPathComponent("Standalone.app", isDirectory: true)
+        try FileManager.default.createDirectory(at: regularApp, withIntermediateDirectories: true)
+        try FileManager.default.createDirectory(at: standaloneApp, withIntermediateDirectories: true)
+
+        let applications = InstalledApplicationScanner(
+            roots: [applicationsRoot],
+            standaloneApplicationURLs: [standaloneApp, regularApp]
+        ).scan()
+
+        XCTAssertEqual(Set(applications.map(\.path)), Set([
+            regularApp.standardizedFileURL.path,
+            standaloneApp.standardizedFileURL.path
+        ]))
+        XCTAssertEqual(applications.count, 2)
+    }
+
+    func testFinderMatchesChineseSearchName() throws {
+        let finderURL = URL(fileURLWithPath: "/System/Library/CoreServices/Finder.app")
+        guard FileManager.default.fileExists(atPath: finderURL.path) else {
+            throw XCTSkip("Finder is unavailable on this system")
+        }
+
+        let finder = InstalledApplication(url: finderURL)
+
+        XCTAssertEqual(finder.bundleIdentifier, "com.apple.finder")
+        XCTAssertTrue(finder.matches(searchText: "访达"))
+        XCTAssertTrue(finder.matches(searchText: "Finder"))
+    }
 }
