@@ -12,12 +12,12 @@ final class ApplicationSwitcherTests: XCTestCase {
         )
     }
 
-    func testActivateExactPath() {
+    func testReopenExactPath() {
         let binding = sampleBinding(path: "/Applications/Target.app")
         let running = descriptor(pid: 42, bundleID: "shared.bundle", path: "/Applications/Target.app")
         XCTAssertEqual(
             resolver.resolve(binding: binding, runningApplications: [running], fileExists: true),
-            .activate(processIdentifier: 42)
+            .reopen(processIdentifier: 42)
         )
     }
 

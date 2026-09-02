@@ -6,7 +6,7 @@ AppKey 是一个仅保留 Manico 核心能力的 macOS 菜单栏 App：把指定
 
 - 支持 `A–Z`、`0–9`、`F1–F12`，快捷键必须包含 `Control`、`Command` 或 `Option`。
 - 同一路径只能绑定一次，同一快捷键只能分配给一个 App。
-- App 未运行时启动，已运行时激活，已经位于前台时隐藏。
+- App 未运行时启动，已运行时重新唤醒（包括恢复已关闭的窗口），已经位于前台时隐藏。
 - 以安装路径识别运行实例；Bundle ID 只在目标路径仍存在且运行实例唯一时回退使用。
 - 缺失 App 的绑定不会删除，也不会自动替换；管理窗口会提供“重新选择”。
 - 配置保存在 `~/Library/Application Support/AppKey/bindings.json`。
